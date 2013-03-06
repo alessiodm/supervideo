@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="supervideo.js"></script>
+  </head>
+  <body>
+    <style>
+      body{
+         background-color:black;
+      }
+    #video{
+      width: 100%;
+      height: 100%;
+      z-index: -19 !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    </style>
+     <p>
+        Let's try media elements...!
+     </p>
+     <div id="controls">
+       <button id="btn-play" onclick="resumeVideo()">Play</button>
+       <button id="btn-muteunmute" onclick="muteUnmute()">Mute/Unmute</button>
+       <button id="btn-slide" onclick="slide()">Slide</button>
+     </div>
+    
+     <div>
+     <video id="polase_video">
+       <source src="http://dev-polasesport.mavigex.com/wp-content/uploads/2013/02/prova_polase.mp4" type="video/mp4"> 
+       <source src="http://dev-polasesport.mavigex.com/wp-content/uploads/2013/02/prova_polase.ogg" type="video/ogg">
+               Your browser does not support the video tag.
+     </video>
+     </div>
+
+    <script>
+      var vid=jQuery("#polase_video").get(0); 
+        
+      jQuery(document).ready(function(){
+        resumeVideo();
+
+        // Let's try
+        jQuery('video').fullVideo();
+      });
+      
+      function resumeVideo(){
+        vid.play();
+      }
+      
+      
+      function slide(){
+
+      }
+
+      
+      function muteUnmute(){
+        if (!vid['muted']){
+          vid['muted'] = true;
+        }
+        else {
+          vid['muted'] = false;
+        }
+      }
+      
+      </script>
+  </body>
+</html>
