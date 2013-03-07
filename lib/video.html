@@ -22,7 +22,7 @@
         Let's try media elements...!
      </p>
      <div id="controls">
-       <button id="btn-play" onclick="resumeVideo()">Play</button>
+       <button id="btn-play" onclick="startStop()">Play/Pause</button>
        <button id="btn-muteunmute" onclick="muteUnmute()">Mute/Unmute</button>
        <button id="btn-slide" onclick="slide()">Slide</button>
      </div>
@@ -37,23 +37,28 @@
 
     <script>
       var vid=jQuery("#polase_video").get(0); 
-        
-      jQuery(document).ready(function(){
-        resumeVideo();
+      var _playing = false;
 
+
+      jQuery(document).ready(function(){
         // Let's try
         jQuery('video').fullVideo();
       });
       
-      function resumeVideo(){
-        vid.play();
+      function startStop(){
+        if (!_playing){
+          vid.play();
+          _playing = true;
+        }
+        else {
+          vid.pause();
+          _playing = false;
+        }
       }
-      
       
       function slide(){
 
       }
-
       
       function muteUnmute(){
         if (!vid['muted']){
