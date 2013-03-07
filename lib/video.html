@@ -19,7 +19,10 @@
     }
     </style>
      <p>
-        Let's try media elements...!
+      Let's try media elements...!
+     </p>
+     <p>
+      Width: <span id="vw"></span>; Height: <span id="vh"></span>
      </p>
      <div id="controls">
        <button id="btn-play" onclick="startStop()">Play/Pause</button>
@@ -41,8 +44,27 @@
 
 
       jQuery(document).ready(function(){
+        
+        setTimeout(function(){
+          jQuery('video').fullVideo('on');
+        }, 1000);
+
+        setTimeout(function(){
+          jQuery('video').fullVideo('off');
+        }, 3000);
+
         // Let's try
-        jQuery('video').fullVideo();
+        //jQuery('video').fullVideo();
+
+        /*
+        jQuery("#polase_video").bind("loadedmetadata", function () {
+            var width = this.videoWidth;
+            var height = this.videoHeight;
+
+            jQuery('#vw').html(width + "prova");
+            jQuery('#vh').html(height);
+        });
+        */
       });
       
       function startStop(){
