@@ -1,0 +1,29 @@
+{
+  "name": "supervideo",
+  "version": "0.0.0",
+  "description": "SuperVideo is a jQuery plugin for creating amazing HTML5 full-sized background video carousels in your web pages!",
+  "main": "supervideo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessiodm/supervideo.git"
+  },
+  "keywords": [
+    "HTML5",
+    "video",
+    "fullscreen",
+    "carousel"
+  ],
+  "author": "Alessio Della Motta",
+  "license": "MIT",
+  "dependencies": {
+    "grunt-cli": "~0.1.7",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.3"
+  }
+}
